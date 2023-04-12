@@ -22,6 +22,9 @@ def get_occurrences(pattern, text):
     return [i for i, h in enumerate(t_hashes) if h == p_hash]
 
 if __name__ == '__main__':
-    print_occurrences(get_occurrences(*read_input()))
+    try:
+        print_occurrences(get_occurrences(*read_input()))
+    except Exception as e:
+        print("An error occurred: ", e)
 
 
